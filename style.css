@@ -73,6 +73,17 @@ main{
     margin-left: -4rem;
 }
 
+.container::after{
+    content: "";
+    position: absolute;
+    top: 18.5%;
+    bottom: 0;
+    left: 180px;
+    right: 50%;
+    background: url(../images/illustration-box-desktop.svg) no-repeat 0px 205px;
+    z-index: 1;
+}
+
 
 /*############# 
 
@@ -149,31 +160,17 @@ frequently asked question styles
     }
 
     .container{
-        display: block;
-        width: 80%;
+        flex-direction: column;
+        width: 350px;
         padding: 0;
-        padding: 10rem 2rem 2rem;
-        background-color: hsl(0, 0%, 100%);
-        
-        background-image: url(images/bg-pattern-mobile.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-size: 60%;
-        background-position: top center;
+        padding: 5rem 2rem 2rem;
+        background: hsl(0, 0%, 100%);
     }
 
     .img{
         display: none;
     }
 
-    .img-mobile{
-        display: block;
-        width: 50%;
-        margin-inline: auto;
-        position: absolute;
-        top: 10%;
-        left: 25%;
-    }
 
     .image-container .woman{
         display: none;
@@ -183,32 +180,20 @@ frequently asked question styles
        width: 100%; 
        
     }
-}
 
-@media screen and (max-width: 375px){
-    
-    body{
-        font-size: 10px;
-        padding: 0 1rem;
-    }
-
-    .img-mobile{
-        width: 60%;
+    .container::after{
+        content: "";
         position: absolute;
-        top: 23%;
-        left: 20%;
+        top: 200px;
+        bottom: 400px;
+        left: 0;
+        right: 0;
+        background: url(../images/illustration-woman-online-mobile.svg) no-repeat center 80px / 250px, url(../images/bg-pattern-mobile.svg) no-repeat center 200px;
+        z-index: 1;
     }
 
-    .container{
-        width: 100%;
-        padding: 6rem 2rem 2rem;
-        background-image: url(images/bg-pattern-mobile.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-size: 60%;
-        background-position: top center;
-    }
 }
+
 
 .attribution{
     text-align: center;
